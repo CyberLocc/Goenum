@@ -139,6 +139,6 @@ rm "$user_home/$url/recon/wayback/extensions/aspx1.txt"
 
 ### Announce Results ### 
 echo "[+] Enumeration Complete" 
-echo "Results @ $user_home/$url/recon/subdomains.txt"
+echo "Results @ $user_home/$url/recon"
 
 
