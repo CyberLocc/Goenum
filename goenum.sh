@@ -20,7 +20,6 @@ GO_VERSION=$(curl -s https://golang.org/VERSION?m=text)
 GO_ARCHIVE="$GO_VERSION.linux-arm64.tar.gz"
 GO_LINK="https://golang.org/dl/$GO_ARCHIVE"
 
-### Check if Go is installed ### 
 if ! command -v go &> /dev/null; then
     echo "Installing GoLang..."
     curl -s -o /tmp/$GO_ARCHIVE $GO_LINK
