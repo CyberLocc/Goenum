@@ -52,8 +52,14 @@ fi
 # Add the GOBIN directory to the PATH
 export PATH=$PATH:$(go env GOPATH)/bin 
 
-### Prompt for URL ###
-read -p "Enter the target URL: " url
+### Check if a URL argument is provided ### 
+if [ -z "$1" ]; then
+    # If not, prompt for the target URL
+    read -p "Enter the target URL: " url
+else
+    # If provided, use the provided URL
+    url="$1"
+fi
 
 ### Prompt to run Amass commands ###
 read -p "Do you want to run Amass commands? (y/n): " run_amass
@@ -102,13 +108,11 @@ subjack -w $user_home/$url/recon/subdomains.txt -t 100 -timeout 30 -ssl -c ~/go/
 ### Scan subdomains with Nmap ### 
 echo "[+] Scanning Domains for open ports..." 
 nmap -iL "$user_home/$url/recon/active.txt" -T4 -oA "$user_home/$url/recon/scanned.txt" -Pn > /dev/null 2>&1
-echo "[+] Nmap scan completed"
 
 ### Scraping Wayback Data ###
 echo "[+] Scraping wayback data..." 
 cat "$user_home/$url/recon/subdomains.txt" | waybackurls >> "$user_home/$url/recon/waybackurls.txt"
 sort -u "$user_home/$url/recon/waybackurls.txt"
-echo "[+] Wayback scraping completed"
 
 ### Pulling and compiling all possible params found in wayback data ###
 echo "[+] Pulling and compiling all possible params found in wayback data..."
@@ -149,5 +153,4 @@ done
 
 ### Announce Results ### 
 echo "[+] Enumeration Complete" 
-echo "Results @ $user_home/$url/recon/subdomains.txt"
-
+echo "Results @ $user_home/$url/recon/"
