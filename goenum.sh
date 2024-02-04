@@ -78,7 +78,7 @@ assetfinder "$url" >> "$user_home/$url/recon/afassets.txt"
 cat "$user_home/$url/recon/afassets.txt" | grep "$url" >> "$user_home/$url/recon/subdomains.txt"
 rm "$user_home/$url/recon/afassets.txt"
 
-### Prompt to run Amass commands ###
+### If prompted run amass commands ###
 if [ "$run_amass" = "y" ]; then
     ### Harvest more subdomains with amass ### 
     echo "[+] Harvesting subdomains with Amass..." 
