@@ -36,3 +36,6 @@ If you encounter any issues while using the script, please check the following:
 ## Contributing
 
 Contributions to this project are welcome! If you have any suggestions for improvements or would like to report a bug, please open an issue on the GitHub repository. Pull requests are also encouraged.
+
+## License
+This script is released under the MIT License.
