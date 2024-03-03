@@ -1,7 +1,7 @@
 # GOEnum
 ### A Bash Auto Enumeration Script that uses Go Tools to Enumerate. 
 
-This script is inspired by TCM Security and "Sumrecon," enhancing a Practical Ethical Hacking tutorial. It optimizes directory structures and tool installations, providing verification of tool presence for efficiency. It introduces a toggle for Amass usage and prompts for domain input, prioritizing user-friendliness. Ascii art adds flair. Development on this project is ongoing.
+This script is inspired by TCM Security and "Sumrecon," enhancing a Practical Ethical Hacking tutorial. It optimizes directory structures, uses Variables set by [Project_Setup](https://github.com/CyberLocc/Project_Setup) . It introduces a toggle for Amass usage and prompts for domain input, prioritizing user-friendliness. Ascii art adds flair. Development on this project is ongoing.
 
 ## Usage
 
