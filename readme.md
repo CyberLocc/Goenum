@@ -12,7 +12,7 @@ Example:
 
 ## Installation
 
-Before using the script, ensure you have the necessary dependencies installed, including GoLang and various tools like assetfinder, amass, httprobe, waybackurls, and gowitness. If any of these tools are missing, the script will provide instructions for installing them.
+Before using the script, ensure you have the necessary dependencies installed, including GoLang and various tools like assetfinder, amass, httprobe, waybackurls, and gowitness.
 
 ## Examples
 
